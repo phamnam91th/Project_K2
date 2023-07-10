@@ -1,0 +1,6 @@
+quan ly hang xe van chuyen khach hang
+
+- hang xe co 10 xe 36 cho ngoi chay hang ngay theo tuyen
+
+database:projectk2
+role, user, employee,
