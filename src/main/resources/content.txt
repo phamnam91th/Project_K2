@@ -1,6 +1,6 @@
-quan ly hang xe van chuyen khach hang
+Quản lý doanh nghiệp vận tải hành khách
 
-- hang xe co 10 xe 36 cho ngoi chay hang ngay theo cac tuyen duong:
+- hãng xe có 10 xe khách giường nằm 36 chỗ hoạt động theo các tuyến cố định:
     + Thanh Hoa <-> Ha Noi (4 xe)
     + Bac Giang <-> Ha Noi (3 xe)
     + Thai Binh <-> Ha Noi (3 xe)
@@ -65,7 +65,11 @@ database:projectk2
 role (admin, user)
 user (danh sách tài khoản đăng nhập ứng dụng)
 employee (danh sách nhân viên văn phòng)
+brand (danh sách các chi nhánh công ty)
 driver (danh sách tài xế)
 car_list (danh sách thông tin của toàn bộ xe chở khách)
+router_list (danh sách các tuyến xe hoạt động trong ngày)
+ticket_list(danh sách đặt vé xe: id, customer name, customer phone, router_list_id, date,  )
+
 
 
