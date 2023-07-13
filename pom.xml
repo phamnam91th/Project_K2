@@ -60,7 +60,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>vn.aptech.project_k2/vn.aptech.project_k2.HelloApplication</mainClass>
+                            <mainClass>vn.aptech.project_k2/vn.aptech.project_k2_g1_c2206l.HelloApplication</mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
                             <jlinkImageName>app</jlinkImageName>

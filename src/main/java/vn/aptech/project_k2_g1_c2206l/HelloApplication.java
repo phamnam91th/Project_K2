@@ -1,4 +1,4 @@
-package vn.aptech.project_k2;
+package vn.aptech.project_k2_g1_c2206l;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
