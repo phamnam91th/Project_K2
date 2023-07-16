@@ -71,5 +71,13 @@ car_list (danh sách thông tin của toàn bộ xe chở khách)
 router_list (danh sách các tuyến xe hoạt động trong ngày)
 ticket_list(danh sách đặt vé xe: id, customer name, customer phone, router_list_id, date,  )
 
+Layout
+    + Admin layout
+      Admin menu (Dashboard, Management, Router, Ticket, Report, Logout).
+        Dashboard:
+            - So xe dang hoat dong.
+            - Tong so ve ban trong thang.
+            -
+
 
 

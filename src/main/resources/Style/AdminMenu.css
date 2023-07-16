@@ -23,7 +23,6 @@ FontAwesomeIcon {
 }
 .footer {
     -fx-alignment: top_center;
-    -fx-spacing: 10 0 0 0;
 }
 .footer Button {
     -fx-pref-width: 170;
@@ -32,7 +31,6 @@ FontAwesomeIcon {
     -fx-text-fill: #FFF;
     -fx-font-size: 1.1em;
     -fx-font-weight: bold;
-    -fx-spacing: 10 0 0 0 ;
     -fx-alignment: center;
 }
 
