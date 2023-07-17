@@ -1,4 +1,25 @@
 package vn.aptech.project_k2_g1_c2206l.Controller.Admin;
 
-public class AdminController {
+import javafx.fxml.Initializable;
+import javafx.scene.layout.BorderPane;
+import vn.aptech.project_k2_g1_c2206l.Model.Model;
+
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class AdminController implements Initializable {
+    public BorderPane admin_parent;
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        Model.getInstance().getViewFactory().getAdminSelectMenuItem().addListener((observableValue, oldVal, newVal) -> {
+            switch (newVal) {
+                case MANAGEMENT -> admin_parent.setCenter(Model.getInstance().getViewFactory().getManagementView());
+                case ROUTER -> admin_parent.setCenter(Model.getInstance().getViewFactory().getRouterView());
+                case TICKET -> admin_parent.setCenter(Model.getInstance().getViewFactory().getTicketView());
+                case REPORT -> admin_parent.setCenter(Model.getInstance().getViewFactory().getReportView());
+                default -> admin_parent.setCenter(Model.getInstance().getViewFactory().getDashboardView());
+            }
+        });
+    }
 }

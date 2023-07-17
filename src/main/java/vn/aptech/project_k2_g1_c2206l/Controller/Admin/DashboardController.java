@@ -5,8 +5,6 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.*;
-import javafx.scene.control.Label;
-import javafx.scene.paint.Color;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -16,6 +14,9 @@ public class DashboardController implements Initializable {
     public CategoryAxis x;
     public NumberAxis y;
     public PieChart myPieChart;
+    public LineChart<String, Number> myLineChart;
+    public CategoryAxis xLine;
+    public NumberAxis yLine;
 
 
     @Override
@@ -55,6 +56,19 @@ public class DashboardController implements Initializable {
         myPieChart.setTitle("Doanh thu tung co so");
         myPieChart.setClockwise(true);
         myPieChart.setAnimated(true);
+
+
+        myLineChart.setTitle("Doanh thu tung thang nam 2023");
+        XYChart.Series<String, Number> series = new XYChart.Series<>();
+        series.getData().add(new XYChart.Data<>("1", 25300));
+        series.getData().add(new XYChart.Data<>("2", 18300));
+        series.getData().add(new XYChart.Data<>("3", 20200));
+        series.getData().add(new XYChart.Data<>("4", 34400));
+        series.getData().add(new XYChart.Data<>("5", 33300));
+        series.getData().add(new XYChart.Data<>("6", 12300));
+        series.getData().add(new XYChart.Data<>("7", 18700));
+        series.setName("Doanh thu theo thang");
+        myLineChart.getData().add(series);
 
     }
 
