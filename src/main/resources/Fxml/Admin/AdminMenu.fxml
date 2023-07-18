@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Line?>
 
-<AnchorPane prefHeight="900.0" prefWidth="200.0" styleClass="menu_container" stylesheets="@../../Style/AdminMenu.css" xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vn.aptech.project_k2_g1_c2206l.Controller.Admin.AdminMenuController">
+<AnchorPane prefHeight="900.0" prefWidth="200.0" styleClass="menu_container" stylesheets="@../../Style/AdminMenu.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vn.aptech.project_k2_g1_c2206l.Controller.Admin.AdminMenuController">
    <VBox layoutX="25.0" prefHeight="106.0" prefWidth="150.0" AnchorPane.bottomAnchor="794.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
       <ImageView fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
          <VBox.margin>
@@ -27,7 +27,7 @@
          <graphic>
             <FontAwesomeIcon glyphName="COGS" size="20" />
          </graphic></Button>
-      <Button fx:id="router_btn" mnemonicParsing="false" text="Router">
+      <Button fx:id="task_btn" mnemonicParsing="false" text="Task">
          <graphic>
             <FontAwesomeIcon glyphName="TRAIN" size="20" />
          </graphic></Button>

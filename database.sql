@@ -16,6 +16,7 @@ create table branch(
     name varchar(30) not null ,
     address varchar(50) not null ,
     hotline varchar(15) not null ,
+    email varchar(20) not null ,
     flag varchar(10) default '0',
     create_at datetime,
     update_at datetime,
@@ -57,7 +58,8 @@ create table employee(
 -- tai khoan dang nhap vao ung dung
 create table users(
     id int auto_increment not null ,
-    name varchar(20) not null ,
+    user_name varchar(20) not null ,
+    password varchar(25) not null ,
     role_id int not null ,
     employee_id int not null ,
     employee_create int not null ,

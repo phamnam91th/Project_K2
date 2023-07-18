@@ -9,6 +9,7 @@ module vn.aptech.project_k2_g1_c2206l {
     exports vn.aptech.project_k2_g1_c2206l;
     exports vn.aptech.project_k2_g1_c2206l.Controller;
     exports vn.aptech.project_k2_g1_c2206l.Controller.Admin;
+    exports vn.aptech.project_k2_g1_c2206l.Controller.Admin.Management;
     exports vn.aptech.project_k2_g1_c2206l.Views;
     exports vn.aptech.project_k2_g1_c2206l.Model;
 }

@@ -15,7 +15,7 @@ public class AdminController implements Initializable {
         Model.getInstance().getViewFactory().getAdminSelectMenuItem().addListener((observableValue, oldVal, newVal) -> {
             switch (newVal) {
                 case MANAGEMENT -> admin_parent.setCenter(Model.getInstance().getViewFactory().getManagementView());
-                case ROUTER -> admin_parent.setCenter(Model.getInstance().getViewFactory().getRouterView());
+                case TASK -> admin_parent.setCenter(Model.getInstance().getViewFactory().getTaskView());
                 case TICKET -> admin_parent.setCenter(Model.getInstance().getViewFactory().getTicketView());
                 case REPORT -> admin_parent.setCenter(Model.getInstance().getViewFactory().getReportView());
                 default -> admin_parent.setCenter(Model.getInstance().getViewFactory().getDashboardView());

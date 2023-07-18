@@ -7,9 +7,11 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import vn.aptech.project_k2_g1_c2206l.Controller.Admin.AdminController;
+import vn.aptech.project_k2_g1_c2206l.Controller.Admin.ManagementController;
 
 import java.io.IOException;
 
@@ -19,10 +21,18 @@ public class ViewFactory {
     // Admin View
     private final ObjectProperty<AdminMenuOptions> adminSelectMenuItem;
     private AnchorPane dashboardView;
-    private AnchorPane managementView;
-    private AnchorPane routerView;
+    private BorderPane managementView;
+    private AnchorPane taskView;
     private AnchorPane ticketView;
     private AnchorPane reportView;
+
+    // Management view
+    private final ObjectProperty<ManagementMenuType> managementSelectMenuItem;
+    private AnchorPane userView;
+    private AnchorPane employeeView;
+    private AnchorPane branchView;
+    private AnchorPane routerView;
+
 
     private double x = 0 ;
     private double y = 0;
@@ -31,6 +41,7 @@ public class ViewFactory {
     public ViewFactory() {
         this.loginAccountType = AccountType.ADMIN;
         this.adminSelectMenuItem = new SimpleObjectProperty<>();
+        this.managementSelectMenuItem = new SimpleObjectProperty<>();
     }
 
     public AccountType getLoginAccountType() {
@@ -58,10 +69,13 @@ public class ViewFactory {
         return dashboardView;
     }
 
-    public AnchorPane getManagementView() {
+    public BorderPane getManagementView() {
         if (managementView == null) {
             try {
-                managementView = new FXMLLoader(getClass().getResource("/Fxml/Admin/Management.fxml")).load();
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Admin/Management.fxml"));
+                ManagementController controller = new ManagementController();
+                loader.setController(controller);
+                managementView = loader.load();
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -69,15 +83,15 @@ public class ViewFactory {
         return managementView;
     }
 
-    public AnchorPane getRouterView() {
-        if (routerView == null) {
+    public AnchorPane getTaskView() {
+        if (taskView == null) {
             try {
-                routerView = new FXMLLoader(getClass().getResource("/Fxml/Admin/Router.fxml")).load();
+                taskView = new FXMLLoader(getClass().getResource("/Fxml/Admin/Task.fxml")).load();
             } catch (Exception e) {
                 e.printStackTrace();
             }
         }
-        return routerView;
+        return taskView;
     }
 
     public AnchorPane getTicketView() {
@@ -110,12 +124,62 @@ public class ViewFactory {
         createStage(loader);
     }
 
-    // show admin
+    // show admin window
     public void showAdminWindow() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Admin/Admin.fxml"));
         AdminController controller = new AdminController();
         loader.setController(controller);
         createStage(loader);
+    }
+
+    // Management view section
+
+    public ObjectProperty<ManagementMenuType> getManagementSelectMenuItem() {
+        return managementSelectMenuItem;
+    }
+
+    public AnchorPane getUserView() {
+        if (userView == null) {
+            try {
+                userView = new FXMLLoader(getClass().getResource("/Fxml/Admin/Management/User.fxml")).load();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        return userView;
+    }
+
+    public AnchorPane getEmployeeView() {
+        if (employeeView == null) {
+            try {
+                employeeView = new FXMLLoader(getClass().getResource("/Fxml/Admin/Management/Employee.fxml")).load();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        return employeeView;
+    }
+
+    public AnchorPane getBranchView() {
+        if (branchView == null) {
+            try {
+                branchView = new FXMLLoader(getClass().getResource("/Fxml/Admin/Management/Branch.fxml")).load();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        return branchView;
+    }
+
+    public AnchorPane getRouterView() {
+        if (routerView == null) {
+            try {
+                routerView = new FXMLLoader(getClass().getResource("/Fxml/Admin/Management/Router.fxml")).load();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        return routerView;
     }
 
     public void createStage(FXMLLoader loader) throws IOException {

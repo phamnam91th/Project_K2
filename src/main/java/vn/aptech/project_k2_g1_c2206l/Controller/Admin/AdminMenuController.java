@@ -11,10 +11,10 @@ import java.util.ResourceBundle;
 public class AdminMenuController implements Initializable {
     public Button dashboard_btn;
     public Button management_btn;
-    public Button router_btn;
     public Button ticket_btn;
     public Button report_btn;
     public Button logout_btn;
+    public Button task_btn;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -24,7 +24,7 @@ public class AdminMenuController implements Initializable {
     private void addListeners() {
         dashboard_btn.setOnAction(actionEvent -> onDashboard());
         management_btn.setOnAction(actionEvent -> onManagement());
-        router_btn.setOnAction(actionEvent -> onRouter());
+        task_btn.setOnAction(actionEvent -> onTask());
         ticket_btn.setOnAction(actionEvent -> onTicket());
         report_btn.setOnAction(actionEvent -> onReport());
     }
@@ -35,8 +35,8 @@ public class AdminMenuController implements Initializable {
         Model.getInstance().getViewFactory().getAdminSelectMenuItem().set(AdminMenuOptions.MANAGEMENT);
     }
 
-    public void onRouter() {
-        Model.getInstance().getViewFactory().getAdminSelectMenuItem().set(AdminMenuOptions.ROUTER);
+    public void onTask() {
+        Model.getInstance().getViewFactory().getAdminSelectMenuItem().set(AdminMenuOptions.TASK);
     }
 
     public void onTicket() {

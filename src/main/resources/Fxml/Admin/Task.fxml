@@ -4,7 +4,7 @@
 <?import javafx.scene.text.Text?>
 
 
-<AnchorPane prefHeight="900.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vn.aptech.project_k2_g1_c2206l.Controller.Admin.RouterController">
+<AnchorPane prefHeight="900.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vn.aptech.project_k2_g1_c2206l.Controller.Admin.TaskController">
    <children>
       <Text layoutX="530.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Router" />
    </children>
