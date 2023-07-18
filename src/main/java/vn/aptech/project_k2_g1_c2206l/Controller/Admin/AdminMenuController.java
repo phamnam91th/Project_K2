@@ -2,9 +2,11 @@ package vn.aptech.project_k2_g1_c2206l.Controller.Admin;
 
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.stage.Stage;
 import vn.aptech.project_k2_g1_c2206l.Model.Model;
 import vn.aptech.project_k2_g1_c2206l.Views.AdminMenuOptions;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -27,6 +29,13 @@ public class AdminMenuController implements Initializable {
         task_btn.setOnAction(actionEvent -> onTask());
         ticket_btn.setOnAction(actionEvent -> onTicket());
         report_btn.setOnAction(actionEvent -> onReport());
+        logout_btn.setOnAction(actionEvent -> {
+            try {
+                onLogout();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        });
     }
     public void onDashboard() {
         Model.getInstance().getViewFactory().getAdminSelectMenuItem().set(AdminMenuOptions.DASHBOARD);
@@ -44,6 +53,12 @@ public class AdminMenuController implements Initializable {
     }
     public void onReport() {
         Model.getInstance().getViewFactory().getAdminSelectMenuItem().set(AdminMenuOptions.REPORT);
+    }
+
+    public void onLogout() throws IOException {
+        Stage stage = (Stage) logout_btn.getScene().getWindow();
+        Model.getInstance().getViewFactory().closeStage(stage);
+        Model.getInstance().getViewFactory().showLoginWindow();
     }
 
 

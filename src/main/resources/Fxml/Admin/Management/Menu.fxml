@@ -4,6 +4,7 @@
 <?import javafx.scene.layout.HBox?>
 
 <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+
       prefHeight="80.0" prefWidth="1100.0" spacing="20.0" xmlns="http://javafx.com/javafx/20.0.1"
       xmlns:fx="http://javafx.com/fxml/1"
       fx:controller="vn.aptech.project_k2_g1_c2206l.Controller.Admin.Management.MenuController">

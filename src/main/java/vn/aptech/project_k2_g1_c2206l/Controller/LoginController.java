@@ -18,6 +18,7 @@ public class LoginController implements Initializable {
     public TextField password_tf;
     public Button login_btn;
     public Label error_lbl;
+    public Button close_btn;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -27,6 +28,10 @@ public class LoginController implements Initializable {
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
+        });
+
+        close_btn.setOnAction(actionEvent -> {
+            System.exit(0);
         });
     }
 

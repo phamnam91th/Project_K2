@@ -39,4 +39,5 @@ public class MenuController implements Initializable {
     public void onRouter() {
         Model.getInstance().getViewFactory().getManagementSelectMenuItem().set(ManagementMenuType.ROUTER);
     }
+
 }
